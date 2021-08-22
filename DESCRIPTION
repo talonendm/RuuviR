@@ -1,0 +1,24 @@
+Package: RuuviR
+Title: Ruuvitag analysis in R
+Version: 0.0.0.0001
+Authors@R: 
+    person(given = "Jaakko",
+           family = "Talonen",
+           role = c("aut", "cre"),
+           email = "talonen.dm@gmail.com",
+           comment = c(ORCID = "0000-0001-9536-6766"))
+Description: Ruuvitag analysis and visualizations in R.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: data.table,
+         janitor,
+         magrittr,
+         dplyr
+Suggests: 
+    knitr,
+    rmarkdown,
+    ggplot2
+VignetteBuilder: knitr

@@ -1,0 +1,101 @@
+---
+title: "Basic Ruuvitag visualizations"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Basic Ruuvitag visualizations}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+# p.description.version.number <- '0.0.0.0001'
+# p.path.git <- "C:/Users/talon_000/git/" # Lenovo
+# install.packages(paste0(p.path.git, p.package.name,"_",p.description.version.number,".tar.gz")) # use the same version number as in DESCRIPTION
+
+library(RuuviR)
+
+library(ggplot2) # visualization
+```
+
+# Introduction
+
+Ruuvitag analysis.
+
+## Data
+
+```{r}
+# path = 'C:\\Users\\talon_000\\Dropbox\\2021\\ruuvi\\m210801saunakahala'
+ruuvi.data <- RuuviR::LoadRuuviExports(
+  path = 'C:\\Users\\talon_000\\Dropbox\\2021\\ruuvi\\m210820'
+  
+  
+)
+
+print(lapply(ruuvi.data, class))
+
+print(summary(ruuvi.data))
+
+```
+
+# Experiments
+```{r}
+ggplot2::ggplot(ruuvi.data, 
+                aes(x = paivamaara,
+                    y = liikelaskuri, 
+                    color = ruuvitag_name)) + geom_point()
+
+
+ggplot2::ggplot(ruuvi.data, 
+                aes(x = paivamaara,
+                    y = kiihtyvyys_y, 
+                    color = ruuvitag_name)) + geom_point()
+
+```
+
+```{r}
+ggplot2::ggplot(ruuvi.data, 
+                aes(x = paivamaara, 
+                    y = lampotila_C, 
+                    color = ruuvitag_name)) + geom_point()
+
+```
+
+```{r}
+ggplot2::ggplot(ruuvi.data, 
+                aes(x = paivamaara, 
+                    y = lampotila_C, 
+                    color = ruuvitag_name)) + geom_point()
+
+```
+
+# Results
+
+
+```{r}
+
+# todo
+# calculate difference! Note, timetags are different. Some kind of difference, mapping needed
+# zoo, xts
+
+
+
+```
+
+
+
+
+
+# Conclusions
+
+
+
+
+
+
