@@ -39,4 +39,4 @@ ggplot2::ggplot(rd2,
                     color = ruuvitag_name)) + geom_point()
 
 
-rd2$
+
