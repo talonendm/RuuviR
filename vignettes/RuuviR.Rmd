@@ -1,0 +1,40 @@
+---
+title: "RuuviR - Get Started"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{RuuviR - Get Started}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(RuuviR)
+ruuvidatalocation <- 'C:\\Users\\talon_000\\Dropbox\\2021\\ruuvi\\m210829'
+```
+
+
+```{r}
+ruuvi.data <- RuuviR::LoadRuuviExports(
+  pathRuuvitag = ruuvidatalocation)
+```
+
+
+```{r}
+data.wide <- RuuviR::MakeDataWide(
+         data = ruuvi.data,
+         timewindow_min = 5,
+         tag_name = FALSE
+       )
+```
+
+```{r}
+RuuviR::PlotRuuvi(data.wide)
+```
+

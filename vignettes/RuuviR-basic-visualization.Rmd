@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 
 library(RuuviR)
 
-library(ggplot2) # visualization
+
 ```
 
 # Introduction
@@ -30,14 +30,12 @@ Ruuvitag analysis.
 
 ## Data
 
-```{r}
+```{r, eval=FALSE}
 # path = 'C:\\Users\\talon_000\\Dropbox\\2021\\ruuvi\\m210801saunakahala'
 ruuvi.data <- RuuviR::LoadRuuviExports(
-  path = 'C:\\Users\\talon_000\\Dropbox\\2021\\ruuvi\\m210820'
-  
-  
-)
+  path = 'C:\\Users\\talon_000\\Dropbox\\2021\\ruuvi\\m210829')
 
+library(ggplot2) # visualization
 print(lapply(ruuvi.data, class))
 
 print(summary(ruuvi.data))
@@ -45,7 +43,7 @@ print(summary(ruuvi.data))
 ```
 
 # Experiments
-```{r}
+```{r, eval = FALSE}
 ggplot2::ggplot(ruuvi.data, 
                 aes(x = paivamaara,
                     y = liikelaskuri, 
@@ -59,19 +57,19 @@ ggplot2::ggplot(ruuvi.data,
 
 ```
 
-```{r}
+```{r, eval=FALSE}
 ggplot2::ggplot(ruuvi.data, 
                 aes(x = paivamaara, 
                     y = lampotila_C, 
-                    color = ruuvitag_name)) + geom_point()
+                    color = id)) + geom_point()
 
 ```
 
-```{r}
+```{r, eval=FALSE}
 ggplot2::ggplot(ruuvi.data, 
                 aes(x = paivamaara, 
                     y = lampotila_C, 
-                    color = ruuvitag_name)) + geom_point()
+                    color = id)) + ggplot2::geom_point()
 
 ```
 

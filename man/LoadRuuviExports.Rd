@@ -4,14 +4,21 @@
 \alias{LoadRuuviExports}
 \title{read ruuvi data from local machine}
 \usage{
-LoadRuuviExports(path)
+LoadRuuviExports(pathRuuvitag = "")
 }
 \arguments{
-\item{path}{local path to csv files}
+\item{pathRuuvitag}{local path to csv files}
+}
+\value{
+This function returns N ruuvi exports (in the selected folder) as one data frame object.
 }
 \description{
 csv data to R
 }
 \examples{
- LoadRuuviExports(path = 'C:\\\\Users\\\\talon_000\\\\Dropbox\\\\2021\\\\ruuvi\\\\m210801saunakahala')
+ \dontrun{
+  ruuvi.data <- LoadRuuviExports(
+   pathRuuvitag = 'C:/Users/talon_000/Dropbox/2021/ruuvi/m210829'
+  )
+ }
 }

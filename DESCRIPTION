@@ -1,13 +1,13 @@
 Package: RuuviR
 Title: Ruuvitag analysis in R
-Version: 0.0.0.0001
+Version: 0.0.0.0002
 Authors@R: 
     person(given = "Jaakko",
            family = "Talonen",
            role = c("aut", "cre"),
            email = "talonen.dm@gmail.com",
            comment = c(ORCID = "0000-0001-9536-6766"))
-Description: Ruuvitag analysis and visualizations in R.
+Description: Ruuvitag data analysis. Analyze temperature and moisture measurements and create visualizations in R.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
@@ -16,9 +16,12 @@ RoxygenNote: 7.1.1
 Imports: data.table,
          janitor,
          magrittr,
-         dplyr
+         dplyr,
+         ggplot2,
+         lubridate
 Suggests: 
     knitr,
-    rmarkdown,
-    ggplot2
+    rmarkdown
 VignetteBuilder: knitr
+Depends:
+    R (>= 2.10)

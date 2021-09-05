@@ -1,0 +1,17 @@
+reference:
+  - title: "Get data"
+    desc: >
+      functions to get data to R session
+    contents:
+      - LoadRuuviExports
+      - MakeDataWide
+  - title: "Analyze Data"
+    desc: >
+      analyze and visualize Ruuvi-data
+    contents:
+      - PlotRuuvi
+  - title: "Utility"
+    desc: >
+      functions to make things easier
+    contents:
+      - helloRuuviR
