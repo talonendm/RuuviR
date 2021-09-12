@@ -10,8 +10,14 @@ reference:
       analyze and visualize Ruuvi-data
     contents:
       - PlotRuuvi
+  - title: "Export Data"
+    desc: >
+      export data and analysis results
+    contents:
+      - SaveRuuviAsJson
   - title: "Utility"
     desc: >
       functions to make things easier
     contents:
       - helloRuuviR
+      - SetupRuuviR

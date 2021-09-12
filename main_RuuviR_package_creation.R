@@ -116,4 +116,8 @@ setwd(p.path.git)
 # finally:
 pkgdown::build_site("RuuviR") # after build. If failing - install new package
 
+# note:  if Error in curl::curl_fetch_memory(url, handle = handle) :
+# Timeout was reached: [cloud.r-project.org] Operation timed out after 10000 milliseconds with 0 out of 0 bytes received
+# Error: callr subprocess failed: Timeout was reached: [cloud.r-project.org] Operation timed out after 10000 milliseconds with 0 out of 0 bytes received
+# no internet?
 

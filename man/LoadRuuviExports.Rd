@@ -4,10 +4,12 @@
 \alias{LoadRuuviExports}
 \title{read ruuvi data from local machine}
 \usage{
-LoadRuuviExports(pathRuuvitag = "")
+LoadRuuviExports(pathRuuvitag = "", clean.field.names = TRUE)
 }
 \arguments{
 \item{pathRuuvitag}{local path to csv files}
+
+\item{clean.field.names}{clean.field.names}
 }
 \value{
 This function returns N ruuvi exports (in the selected folder) as one data frame object.

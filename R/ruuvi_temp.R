@@ -14,8 +14,44 @@ if (FALSE) {
 
   names(rd1)
 
+
+  # RuuviR 0.0.0003: create json
+
   library(RuuviR)
-  rd1 <- RuuviR::LoadRuuviExports(pathRuuvitag = 'C:\\Users\\talon_000\\Dropbox\\2021\\ruuvi\\m210829')
+
+
+
+
+
+
+  # notes:
+  # make reference work correctly in github: https://raw.githack.com/
+  # https://rawcdn.githack.com/talonendm/RuuviR/37c731d6ffd54d439bc0e4fe9a4a4e6bb7f801a6/docs/index.html
+
+  # dev: see changes directly:
+  # https://raw.githack.com/talonendm/RuuviR/master/docs/index.html
+
+  install.packages('rjson')
+  library(rjson)
+
+  grep("\\[",js1)
+  grep("\\]",js1)
+
+  install.packages('RJSONIO')
+  library(RJSONIO)
+
+  o2 <- RJSONIO::toJSON(rd2, collapse = "", .escapeEscapes = TRUE, pretty = TRUE)
+  o3 <- RJSONIO::toJSON(rd2, pretty = FALSE) # add tabs or not
+
+  js3 <- rjson::toJSON(rd2, indent = 1)
+
+  js2 <- jsonlite::fromJSON(rjson::toJSON(rd2) ) # creates 5 lists.
+
+  # RuuviR 0.0.0002
+
+
+  library(RuuviR)
+  rd1 <- RuuviR::LoadRuuviExports(pathRuuvitag = 'C:/Users/talon_000/Dropbox/2021/ruuvi/m210829')
   data.wide <- MakeDataWide(
          data = rd1,
          timewindow_min = 5,

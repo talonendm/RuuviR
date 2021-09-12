@@ -1,6 +1,6 @@
 Package: RuuviR
 Title: Ruuvitag analysis in R
-Version: 0.0.0.0002
+Version: 0.0.0.0003
 Authors@R: 
     person(given = "Jaakko",
            family = "Talonen",
@@ -18,7 +18,10 @@ Imports: data.table,
          magrittr,
          dplyr,
          ggplot2,
-         lubridate
+         lubridate,
+         jsonlite,
+         stringi,
+         rlang
 Suggests: 
     knitr,
     rmarkdown
